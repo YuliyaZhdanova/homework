@@ -14,13 +14,13 @@ def generate_body(header, image, link):
     promisesList = ""
     body = f"""<h1>{header}</h1>
     <img src='{image}' width='100px' height='100px' alt='horoscope'/>
-    <ol><li>Время суток<ul>"""
+    <ol><li><h3>Время суток:</h3><ul>"""
     for i in range(len(times)):
         timesList += f"<li>{times[i]}</li>"
-    body =  f"{body}{timesList}</ul></li><li>Глаголы<ul>"
+    body =  f"{body}{timesList}</ul></li><li><h3>Глаголы:</h3><ul>"
     for i in range(len(advices)):
         advicesList += f"<li>{advices[i]}</li>"
-    body =  f"{body}{advicesList}</ul></li><li>Ожидания<ul>"
+    body =  f"{body}{advicesList}</ul></li><li><h3>Ожидания:</h3><ul>"
     for i in range(len(promises)):
         promisesList += f"<li>{promises[i]}</li>"
     body =  f"""{body}{promisesList}</ul></li></ol>
@@ -40,5 +40,5 @@ save_page(
     title = "Информация",
     header = "О чем это все",
     image = 'horoscope.png',
-    link = "/"
+    link = "./"
 )

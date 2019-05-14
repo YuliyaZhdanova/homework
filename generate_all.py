@@ -17,7 +17,7 @@ def generate_body(header, paragraphs, link, textLink):
     for p in paragraphs:
         body = f"""{body}
         <p>{p}</p>"""
-    body = f"{body} <p><a href = '{link}'>{textLink}</a>"
+    body = f"{body} <hr> <p><a href = '{link}'>{textLink}</a>"
     return f"""<body> 
             {body} 
             </body>"""
